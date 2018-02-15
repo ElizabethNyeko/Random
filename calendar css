@@ -1,0 +1,108 @@
+@ -0,0 +1,108 @@
+/*Set the table color, border, and spacing...*/
+
+table.cal {
+  color: grey;
+  border: 2px solid #00ced1;
+  border-spacing: 0px;
+  -webkit-border-radius: 0 0 25px 25px;
+  border-radius: 0 0 25px 25px;
+}
+
+/*Alternate colors between even and odd weeks*/
+
+tr:nth-child(odd) {
+  background: #afeeef;
+}
+
+tr:nth-child(even) {
+  background: #00ced11f;
+}
+
+/*To curve the bottom, we need to curve the
+row and the element.  And each element needs to
+curve a different corner.*/
+
+tr:last-child>td:last-child {
+  -webkit-border-radius: 0 0 25px 0;
+  border-radius: 0 0 25px 0;
+}
+
+tr:last-child>td:first-child {
+  -webkit-border-radius: 0 0 0 25px;
+  border-radius: 0 0 0 25px;
+}
+
+tr:last-child {
+  -webkit-border-radius: 25px 25px 25px 25px;
+  ;
+  border-radius: 25px 25px 25px 25px;
+}
+
+/*Format the caption
+Use border-radius for just some corners*/
+
+caption {
+  background: #40E0D0;
+  -webkit-border-radius: 25px 25px 0 0;
+  border-radius: 25px 25px 0 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+th, td {
+  margin: 2px;
+  padding-bottom: 2px;
+}
+
+/*Format the table headings*/
+
+tr th {
+  background: #fff;
+  text-align: center;
+}
+
+/*Set the size and alignment for elements*/
+
+td {
+  width: 75px;
+  height: 75px;
+  vertical-align: top;
+}
+
+/*Format any holidays*/
+
+.holiday {
+  margin: 0;
+  padding: 0;
+  background-color: #40E0D0;
+  color: #fff;
+  transition: 1s linear;
+}
+
+.holiday:hover {
+  background-color: #FF8C00;
+}
+
+/* Hide appointments by default */
+
+span {
+  visibility: hidden;
+  display: block;
+  text-align: center;
+  color: #800000;
+}
+
+td:hover>span {
+  visibility: visible;
+}
+
+.old {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/holiday.png") no-repeat;
+  border-spacing: 0;
+  padding:0;
+  margin: 0;
+  background-color: #51A39D;
+  color:rgba(0,0,0,.25);
